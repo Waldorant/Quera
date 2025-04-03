@@ -1,0 +1,208 @@
+/* h1 is a selector, color is a property and brown is a value */
+/* you can find other fonts in jsdeliver website, in search toolbar search vazirmatn as an example, click on the html output, copy the link and save it in head part of the html code. note that it should be above your website css link to be readable */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --border-color: #000000;
+  --background-top: #ffffff;
+  --background-bottom: #aeebfb;
+  --light-shadow: #96969680;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  direction: ltr;
+  padding-top: 60px;
+  flex-flow: c;
+}
+header {
+  background: url(../images/cloud2.svg),
+    linear-gradient(var(--background-top), var(--background-bottom));
+  background-position: bottom -20px left 50%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 500px;
+}
+
+.header-nav {
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0px 2px 2px var(--light-shadow);
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navigation-links {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+nav li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+nav li:first-child {
+  margin-right: auto; /* Pushes the first item to the left */
+}
+/* those links which have href, they are named as a:link */
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #000000b3;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgba(0, 0, 0);
+}
+
+h1,
+h2 {
+  align-items: flex-start;
+  text-align: center;
+  font-style: italic;
+  color: #000000cc;
+  padding-top: 10px;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.summry-laptop {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.summry-laptop img {
+  display: block;
+  width: 80%;
+  min-width: 400px;
+  height: auto;
+}
+
+.features_items {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  width: 50%;
+}
+
+.features_item {
+  padding: 0.5rem;
+}
+
+.features_item:hover {
+  background-color: #09c;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.features_header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.features_link:any-link {
+  padding-top: 0.3rem;
+  display: block;
+  text-decoration: underline;
+  color: rgb(21, 98, 171);
+}
+.cards {
+  background-image: url(../images/stat.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15em 0;
+  height: 500px;
+}
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 2rem;
+}
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px -3px rgba(0, 153, 204, 0.43);
+  text-align: center;
+  width: max(400px, 20vw);
+  padding: 2.5rem 0;
+}
+.card-number {
+  color: #0076a6;
+  font-size: 4rem;
+  font-weight: bold;
+}
+.card-item {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.card-text {
+  padding-top: 0.5rem;
+}
+
+@media all and (max-width: 1024px) {
+  .navigation-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+    position: relative;
+  }
+  .header-nav {
+    width: 20%;
+  }
+  .header-ul {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .info {
+    grid-template-columns: 1fr;
+  }
+  .summry-laptop {
+    justify-content: center;
+  }
+  .features_items {
+    margin-left: 20%;
+    width: 50%;
+  }
+}
